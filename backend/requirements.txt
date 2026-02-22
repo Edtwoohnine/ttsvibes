@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+kani-tts-2
+torch
+numpy
+soundfile
+librosa
+pydantic
+transformers==4.56.0
