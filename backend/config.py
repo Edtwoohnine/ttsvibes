@@ -10,7 +10,7 @@ VOICES_DIR.mkdir(parents=True, exist_ok=True)
 TEMP_DIR.mkdir(parents=True, exist_ok=True)
 
 # Model config
-TTS_MODEL_NAME = "nineninesix/kani-tts-2-model"
+TTS_MODEL_NAME = "nineninesix/kani-tts-2-en"
 EMBEDDER_MODEL_NAME = "nineninesix/speaker-emb-tbr"
 
 # Generation defaults

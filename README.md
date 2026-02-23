@@ -21,9 +21,17 @@ Record your voice (or upload audio), create a voice clone, then generate speech 
 
 ```bash
 cd backend
+python -m venv .venv
+.venv\Scripts\activate        # Windows
+# source .venv/bin/activate   # Linux/macOS
+
 pip install -r requirements.txt
+pip install --no-deps kani-tts-2==0.0.5
+
 uvicorn main:app --reload
 ```
+
+> **Note (Windows):** `kani-tts-2` is installed with `--no-deps` because its transitive dependency `pynini` does not build on Windows. All core deps (`nemo-toolkit`, `transformers`, etc.) are pinned in `requirements.txt`. The `nemo_text_processing` module (text normalization) is unavailable on Windows but is not needed for voice cloning or TTS generation.
 
 The API server starts at `http://localhost:8000`. Models are downloaded on first launch (may take a few minutes).
 
